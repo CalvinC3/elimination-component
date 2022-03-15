@@ -68,3 +68,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### SPECS
+
+use ReactJS to make the prototype/proof of concept
+of Elimination Draw Animation UI/UX             
+
+What we want to see:
+1. Tiles representing unique objects
+    - unique number
+2. These tiles can be dynamic based on inputed number of tiles
+    - input to determine x number of total tiles
+3. Elimination process would be:
+    - Randomly select a tile to eliminate until there's only one left
+    - Tiles can only be eliminated once
+    - Animation and logic should not go over the eliminated tiles
+
+Deets:
+1. Elimination logic
+    - x number of total tiles
+    - iterate over x number of tiles (recurssion)
+    - randomly select a number that is not yet eliminated
+    - once a number has been selected
+    - we store that in a variable as a list of elliminated numbers
+    - during each loop, we filter out the eliminated numbers from the
+        master list
+
+2. Dynamic number/generation of tiles
+    - Provide an input field that accepts number
+    - base on input we render a `tile component`
+    - the tile component will have a unique number id
+    - display the tile in the UI
+
+3. Button to start/trigger the elimination process 
+    and button to reset everything
+
+4. Elimination Process Animation
+    - change color of the tile that is eliminated - gray
+    - the last remaining one change the color - green
+    - we can add actual animation/transition later
+    
+
